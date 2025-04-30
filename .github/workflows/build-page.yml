@@ -24,11 +24,12 @@ jobs:
           cache: 'yarn'
       - run: yarn install --frozen-lockfile --immutable # per suggestion of actions/setup-node
         name: Setup Yarn
-      - run: make build_deploy
+      - run: make build
         name: Build Jekyll site
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
-          token: ${{ secrets.BOT_GH_PAT }}
           branch: gh-pages
           folder: _site
+          clean: true
+          single-commit: true
