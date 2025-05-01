@@ -1,7 +1,8 @@
 ---
 ---
 
-@import "bootstrap";
+@import "../node_module/bootstrap/scss/functions";
+@import "../node_module/bootstrap/scss/bootstrap";
 @import "syntax-highlighting";
 
 $baseurl:"{{ site.baseurl }}";
